@@ -1,0 +1,1702 @@
+[
+    {
+        "id": "1043bc82.023773",
+        "type": "tab",
+        "label": "Punkatoo logger",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "38484eb3.47cc42",
+        "type": "tab",
+        "label": "Weather data upload",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8fed5dbd7a3020a5",
+        "type": "tab",
+        "label": "ESP-NOW",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "12a1cdf307de99cc",
+        "type": "tab",
+        "label": "Fan Control",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "29ec077e.ab0b58",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "47afc2b6.fa0f5c",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "weather",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "e962ebd5015b4597",
+        "type": "serial-port",
+        "serialport": "/dev/serial0",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "21cdba4a.be7146",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mudlark.local",
+        "port": "1883",
+        "clientid": "ESPNOW",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "49744f72ed5ac107",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "2bcab409.9d6d9c",
+        "type": "mqtt in",
+        "z": "1043bc82.023773",
+        "name": "",
+        "topic": "home/+/event/log",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "29ec077e.ab0b58",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "faa9d732.bc4b68"
+            ]
+        ]
+    },
+    {
+        "id": "1805e7d.e566a18",
+        "type": "file",
+        "z": "1043bc82.023773",
+        "name": "Write to log",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 990,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "76e76f1a.98c4f",
+        "type": "function",
+        "z": "1043bc82.023773",
+        "name": "Format log entry",
+        "func": "var tpc = msg.topic;\nvar i = tpc.indexOf(\"/\");\nvar f = tpc.substr(i+1);\ni = f.indexOf(\"/\");\nmsg.filename = \"/var/log/punkatoo/\" + f.substr(0,i) + \".log\"\n\nmsg.payload = msg.payload.ts.timestamp + \" \" + msg.payload.serial + \" \" + msg.payload.text;\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 180,
+        "wires": [
+            [
+                "1805e7d.e566a18"
+            ]
+        ]
+    },
+    {
+        "id": "e6feb17a.62e9b",
+        "type": "moment",
+        "z": "1043bc82.023773",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "date",
+        "inTz": "America/Sao_Paulo",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "YYYY-MM-DD HH:mm:ss.SSS*",
+        "locale": "en-GB",
+        "output": "payload.ts.timestamp",
+        "outputType": "msg",
+        "outTz": "America/Sao_Paulo",
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "76e76f1a.98c4f"
+            ]
+        ]
+    },
+    {
+        "id": "faa9d732.bc4b68",
+        "type": "switch",
+        "z": "1043bc82.023773",
+        "name": "",
+        "property": "payload.ts.valid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "76e76f1a.98c4f"
+            ],
+            [
+                "e6feb17a.62e9b"
+            ]
+        ]
+    },
+    {
+        "id": "e5538d90.b4414",
+        "type": "mqtt in",
+        "z": "38484eb3.47cc42",
+        "name": "",
+        "topic": "home/weather",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "29ec077e.ab0b58",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "d886aeff.b059a"
+            ]
+        ]
+    },
+    {
+        "id": "d886aeff.b059a",
+        "type": "influxdb out",
+        "z": "38484eb3.47cc42",
+        "influxdb": "47afc2b6.fa0f5c",
+        "name": "Weather DB",
+        "measurement": "weather",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 370,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bdddeccaef140745",
+        "type": "serial in",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Serial0",
+        "serial": "e962ebd5015b4597",
+        "x": 150,
+        "y": 960,
+        "wires": [
+            [
+                "c6104903054d6eef"
+            ]
+        ]
+    },
+    {
+        "id": "42bb4c797511a592",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "d": true,
+        "name": "Msg from ESP",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "8c602f8bed0a68e0",
+        "type": "serial out",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "serial": "e962ebd5015b4597",
+        "x": 1130,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "0f5afc39c8a8378c",
+        "type": "rpi-gpio out",
+        "z": "8fed5dbd7a3020a5",
+        "name": "EN",
+        "pin": "24",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1230,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "cdd7e506d5235141",
+        "type": "rpi-gpio out",
+        "z": "8fed5dbd7a3020a5",
+        "name": "~RES",
+        "pin": "23",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1350,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f7e4c136b8ae5a55",
+        "type": "rpi-gpio out",
+        "z": "8fed5dbd7a3020a5",
+        "name": "FLASH",
+        "pin": "17",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1400,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "75d778bc7c7c5e4a",
+        "type": "delay",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 910,
+        "y": 440,
+        "wires": [
+            [
+                "2f1645662b259d48"
+            ]
+        ]
+    },
+    {
+        "id": "2f1645662b259d48",
+        "type": "change",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Reset to HIGH",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 440,
+        "wires": [
+            [
+                "cdd7e506d5235141"
+            ]
+        ]
+    },
+    {
+        "id": "60038a087412efad",
+        "type": "inject",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Enable",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 190,
+        "y": 760,
+        "wires": [
+            [
+                "0f5afc39c8a8378c"
+            ]
+        ]
+    },
+    {
+        "id": "4e06474ae7e3aaf0",
+        "type": "inject",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Disable",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 190,
+        "y": 840,
+        "wires": [
+            [
+                "0f5afc39c8a8378c"
+            ]
+        ]
+    },
+    {
+        "id": "a691eb6362b98155",
+        "type": "inject",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Set Program Mode",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 150,
+        "y": 600,
+        "wires": [
+            [
+                "8f8f63ab7596da13"
+            ]
+        ]
+    },
+    {
+        "id": "03e318386cc64171",
+        "type": "delay",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 580,
+        "wires": [
+            [
+                "6ae4303e4a17f04d",
+                "75022ad70523d1d6"
+            ]
+        ]
+    },
+    {
+        "id": "6ae4303e4a17f04d",
+        "type": "change",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Reset to LOW",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 380,
+        "wires": [
+            [
+                "cdd7e506d5235141",
+                "75d778bc7c7c5e4a"
+            ]
+        ]
+    },
+    {
+        "id": "8ed7719136160ed6",
+        "type": "inject",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Reset",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "6ae4303e4a17f04d"
+            ]
+        ]
+    },
+    {
+        "id": "75022ad70523d1d6",
+        "type": "delay",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 980,
+        "y": 580,
+        "wires": [
+            [
+                "d5dc587af6be404a"
+            ]
+        ]
+    },
+    {
+        "id": "d5dc587af6be404a",
+        "type": "change",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Flash to HIGH",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 580,
+        "wires": [
+            [
+                "f7e4c136b8ae5a55"
+            ]
+        ]
+    },
+    {
+        "id": "8018e027a9ee8c52",
+        "type": "change",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Flash to LOW",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 660,
+        "wires": [
+            [
+                "f7e4c136b8ae5a55"
+            ]
+        ]
+    },
+    {
+        "id": "6c6aed77501c71c5",
+        "type": "mqtt in",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Subscribe",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "21cdba4a.be7146",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 920,
+        "y": 1220,
+        "wires": [
+            [
+                "9649991a4b434a3f",
+                "8c602f8bed0a68e0"
+            ]
+        ]
+    },
+    {
+        "id": "9649991a4b434a3f",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "name": "MQTT Recd",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "26c7c1f038d3d365",
+        "type": "switch",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "property": "op",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "subscribe",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "publish",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 5,
+        "x": 450,
+        "y": 1360,
+        "wires": [
+            [
+                "6efded3c80cb926a"
+            ],
+            [
+                "8c06d93b1635976e",
+                "e634a2df4ae29b44"
+            ],
+            [
+                "0e5b400a8d1fe060"
+            ],
+            [
+                "d1fd9bd9b5d5a3ce"
+            ],
+            [
+                "54f0691f2b5ade8c"
+            ]
+        ]
+    },
+    {
+        "id": "8c06d93b1635976e",
+        "type": "mqtt out",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Publish",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "21cdba4a.be7146",
+        "x": 920,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "54f0691f2b5ade8c",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "62cdb9a422e946a0",
+        "type": "inject",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Subscribe",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "op",
+                "v": "subscribe",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "home/bedroom/lamp/status",
+        "x": 140,
+        "y": 1340,
+        "wires": [
+            [
+                "26c7c1f038d3d365"
+            ]
+        ]
+    },
+    {
+        "id": "b5ef4d781e28b9b3",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "6e54525829286bd1",
+        "type": "inject",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Lamp on",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "op",
+                "v": "publish",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "home/bedroom/lamp/switchto",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 140,
+        "y": 1400,
+        "wires": [
+            [
+                "26c7c1f038d3d365"
+            ]
+        ]
+    },
+    {
+        "id": "e634a2df4ae29b44",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "6efded3c80cb926a",
+        "type": "change",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "subscribe",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 1220,
+        "wires": [
+            [
+                "6c6aed77501c71c5",
+                "b5ef4d781e28b9b3"
+            ]
+        ]
+    },
+    {
+        "id": "aa2fbd9478dd68fe",
+        "type": "inject",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Lamp off",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "op",
+                "v": "publish",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "home/bedroom/lamp/switchto",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 140,
+        "y": 1460,
+        "wires": [
+            [
+                "26c7c1f038d3d365"
+            ]
+        ]
+    },
+    {
+        "id": "bc62b9301a5aab98",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Toggleout",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "c93b9679ef96eceb",
+        "type": "inject",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Lamp toggle",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "home/bedroom/lamp/switchto",
+        "payload": "lampstate",
+        "payloadType": "global",
+        "x": 150,
+        "y": 1560,
+        "wires": [
+            [
+                "9413f522c2e6c4f2"
+            ]
+        ]
+    },
+    {
+        "id": "9413f522c2e6c4f2",
+        "type": "switch",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "property": "lampstate",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 1560,
+        "wires": [
+            [
+                "d1fd9bd9b5d5a3ce"
+            ],
+            [
+                "0e5b400a8d1fe060"
+            ]
+        ]
+    },
+    {
+        "id": "d1fd9bd9b5d5a3ce",
+        "type": "change",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Lamp to OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lampstate",
+                "pt": "global",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1540,
+        "wires": [
+            [
+                "bc62b9301a5aab98",
+                "cae66d69ce7c54da"
+            ]
+        ]
+    },
+    {
+        "id": "0e5b400a8d1fe060",
+        "type": "change",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Lamp to ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lampstate",
+                "pt": "global",
+                "to": "1",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1600,
+        "wires": [
+            [
+                "bc62b9301a5aab98",
+                "cae66d69ce7c54da"
+            ]
+        ]
+    },
+    {
+        "id": "cae66d69ce7c54da",
+        "type": "mqtt out",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Publish",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "21cdba4a.be7146",
+        "x": 1000,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "12d4622ae63238c8",
+        "type": "change",
+        "z": "8fed5dbd7a3020a5",
+        "d": true,
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.op",
+                "pt": "msg",
+                "to": "op",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "home/bedroom/lamp/switchto",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 1180,
+        "wires": [
+            [
+                "26c7c1f038d3d365",
+                "42bb4c797511a592"
+            ]
+        ]
+    },
+    {
+        "id": "c6104903054d6eef",
+        "type": "json",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 330,
+        "y": 960,
+        "wires": [
+            [
+                "12d4622ae63238c8"
+            ]
+        ]
+    },
+    {
+        "id": "573a4a016a8bf824",
+        "type": "catch",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "scope": [
+            "c6104903054d6eef"
+        ],
+        "uncaught": false,
+        "x": 790,
+        "y": 960,
+        "wires": [
+            [
+                "26e403f14a2e2085"
+            ]
+        ]
+    },
+    {
+        "id": "26e403f14a2e2085",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "d": true,
+        "name": "JSON Error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "07c7e316648d554e",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "dc40f3ca0908beea",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "6a736be56ec78d5d",
+        "type": "function",
+        "z": "8fed5dbd7a3020a5",
+        "name": "Strip newline",
+        "func": "msg.payload = msg.payload.trim();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 200,
+        "wires": [
+            [
+                "d38ce545921bb45c"
+            ]
+        ]
+    },
+    {
+        "id": "d38ce545921bb45c",
+        "type": "switch",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "reset",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "prog",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "1670c8664d76c56a",
+                "6ae4303e4a17f04d"
+            ],
+            [
+                "2055a3599da2d74f",
+                "8f8f63ab7596da13"
+            ]
+        ]
+    },
+    {
+        "id": "1670c8664d76c56a",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "d": true,
+        "name": "res",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2055a3599da2d74f",
+        "type": "debug",
+        "z": "8fed5dbd7a3020a5",
+        "d": true,
+        "name": "prog",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ad677f1a19282053",
+        "type": "mqtt in",
+        "z": "8fed5dbd7a3020a5",
+        "name": "",
+        "topic": "mudlark/espnow",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "21cdba4a.be7146",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 200,
+        "wires": [
+            [
+                "6a736be56ec78d5d"
+            ]
+        ]
+    },
+    {
+        "id": "8f8f63ab7596da13",
+        "type": "change",
+        "z": "8fed5dbd7a3020a5",
+        "name": "NOP",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 620,
+        "wires": [
+            [
+                "03e318386cc64171",
+                "8018e027a9ee8c52"
+            ]
+        ]
+    },
+    {
+        "id": "caccefe476e8d570",
+        "type": "rpi-gpio out",
+        "z": "12a1cdf307de99cc",
+        "name": "FAN",
+        "pin": "18",
+        "set": "",
+        "level": "0",
+        "freq": "100",
+        "out": "pwm",
+        "bcm": true,
+        "x": 1110,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e94c80d8f4c6081a",
+        "type": "inject",
+        "z": "12a1cdf307de99cc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "ec622016fce21f21"
+            ]
+        ]
+    },
+    {
+        "id": "f8d5eb96f40fa3e2",
+        "type": "debug",
+        "z": "12a1cdf307de99cc",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "0c9f83d605cd6f40",
+        "type": "json",
+        "z": "12a1cdf307de99cc",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "f8d5eb96f40fa3e2",
+                "038d57a91fe3d9bb"
+            ]
+        ]
+    },
+    {
+        "id": "ec622016fce21f21",
+        "type": "file in",
+        "z": "12a1cdf307de99cc",
+        "name": "CPU Temp",
+        "filename": "/sys/class/thermal/thermal_zone0/temp",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 310,
+        "y": 160,
+        "wires": [
+            [
+                "0c9f83d605cd6f40"
+            ]
+        ]
+    },
+    {
+        "id": "038d57a91fe3d9bb",
+        "type": "switch",
+        "z": "12a1cdf307de99cc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "57999",
+                "vt": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "58000",
+                "vt": "num",
+                "v2": "61999",
+                "v2t": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "62000",
+                "vt": "num",
+                "v2": "64999",
+                "v2t": "num"
+            },
+            {
+                "t": "gt",
+                "v": "65000",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 630,
+        "y": 160,
+        "wires": [
+            [
+                "9d6139d1adb2379a"
+            ],
+            [
+                "d3847822e570e45d"
+            ],
+            [
+                "f96d5ee929d0c406"
+            ],
+            [
+                "f5b235a290394caf"
+            ]
+        ]
+    },
+    {
+        "id": "9d6139d1adb2379a",
+        "type": "change",
+        "z": "12a1cdf307de99cc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 80,
+        "wires": [
+            [
+                "caccefe476e8d570"
+            ]
+        ]
+    },
+    {
+        "id": "d3847822e570e45d",
+        "type": "change",
+        "z": "12a1cdf307de99cc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "10",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 140,
+        "wires": [
+            [
+                "caccefe476e8d570"
+            ]
+        ]
+    },
+    {
+        "id": "f96d5ee929d0c406",
+        "type": "change",
+        "z": "12a1cdf307de99cc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "55",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 200,
+        "wires": [
+            [
+                "caccefe476e8d570"
+            ]
+        ]
+    },
+    {
+        "id": "f5b235a290394caf",
+        "type": "change",
+        "z": "12a1cdf307de99cc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "100",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 260,
+        "wires": [
+            [
+                "caccefe476e8d570"
+            ]
+        ]
+    },
+    {
+        "id": "9b0c03d5eddf8548",
+        "type": "comment",
+        "z": "12a1cdf307de99cc",
+        "name": "Needs some form of hysteresis",
+        "info": "",
+        "x": 1170,
+        "y": 240,
+        "wires": []
+    }
+]
